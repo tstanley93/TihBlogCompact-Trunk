@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Добавяне</value>
+  </data>
+  <data name="AddNew" xml:space="preserve">
+    <value>Добави нов</value>
+  </data>
+  <data name="AddNewComment" xml:space="preserve">
+    <value>Добави Нов Коментар</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Администратор</value>
+  </data>
+  <data name="AllArticles" xml:space="preserve">
+    <value>Всички Статии</value>
+  </data>
+  <data name="AllCategories" xml:space="preserve">
+    <value>Всички Категории</value>
+  </data>
+  <data name="ApplyFilter" xml:space="preserve">
+    <value>Приложи Филтър</value>
+  </data>
+  <data name="ArchiveFolder" xml:space="preserve">
+    <value>Папка Архиви</value>
+  </data>
+  <data name="Archives" xml:space="preserve">
+    <value>Архиви</value>
+  </data>
+  <data name="Article" xml:space="preserve">
+    <value>Статия</value>
+  </data>
+  <data name="ArticleAdded" xml:space="preserve">
+    <value>Статията беше успешно добавена</value>
+  </data>
+  <data name="Articles" xml:space="preserve">
+    <value>Статии</value>
+  </data>
+  <data name="ArticlesExistOnCategory" xml:space="preserve">
+    <value>Статия(и) съществуват в тази категория</value>
+  </data>
+  <data name="ArticlesPerPage" xml:space="preserve">
+    <value>Брой на Статий на страница</value>
+  </data>
+  <data name="Authors" xml:space="preserve">
+    <value>Автор(и)</value>
+  </data>
+  <data name="BlogSubTitle" xml:space="preserve">
+    <value>Подзаглавие на Блога</value>
+  </data>
+  <data name="BlogTitle" xml:space="preserve">
+    <value>Заглавие на Блога</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Категории</value>
+  </data>
+  <data name="CategoryAdded" xml:space="preserve">
+    <value>Категорията беше успешно добавена</value>
+  </data>
+  <data name="CategoryName" xml:space="preserve">
+    <value>Име на категория</value>
+  </data>
+  <data name="CategoryNameExist" xml:space="preserve">
+    <value>Категория със това име вече съществува</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Промени Парола</value>
+  </data>
+  <data name="Characters" xml:space="preserve">
+    <value>символи</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Коментар</value>
+  </data>
+  <data name="CommentAdded" xml:space="preserve">
+    <value>Коментарът беше успешно добавен</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Коментари</value>
+  </data>
+  <data name="CommentsAreOff" xml:space="preserve">
+    <value>Коментарите за заключени</value>
+  </data>
+  <data name="CommentsToShow" xml:space="preserve">
+    <value>Брой на коментари за показване</value>
+  </data>
+  <data name="ConfirmNewPassword" xml:space="preserve">
+    <value>Потвърди Нова Парола</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Държава</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Създадено от</value>
+  </data>
+  <data name="CryptKey" xml:space="preserve">
+    <value>Ключ за Криптиране</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>Текуща Парола</value>
+  </data>
+  <data name="CurrentStatus" xml:space="preserve">
+    <value>Текущо Състояние</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>емайл</value>
+  </data>
+  <data name="EnterComment" xml:space="preserve">
+    <value>Моля, въведете коментар</value>
+  </data>
+  <data name="EnterConfirmPassword" xml:space="preserve">
+    <value>потвърдете паролата</value>
+  </data>
+  <data name="EnterEmail" xml:space="preserve">
+    <value>Моля, въведете емайл</value>
+  </data>
+  <data name="EnterLessThan" xml:space="preserve">
+    <value>Моля, въведете по-малко от</value>
+  </data>
+  <data name="EnterName" xml:space="preserve">
+    <value>Моля, въведете Име</value>
+  </data>
+  <data name="EnterNewPassword" xml:space="preserve">
+    <value>Моля, въведете нова парола</value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>Моля, въведете парола</value>
+  </data>
+  <data name="EnterUserName" xml:space="preserve">
+    <value>Моля, въведете потребителско име</value>
+  </data>
+  <data name="EnterValidEmail" xml:space="preserve">
+    <value>Моля, въведете валиден емайл</value>
+  </data>
+  <data name="EnterValidName" xml:space="preserve">
+    <value>Моля, въведете валидно Име</value>
+  </data>
+  <data name="EnterValidURL" xml:space="preserve">
+    <value>Моля, въведете валидно URL</value>
+  </data>
+  <data name="FileManager" xml:space="preserve">
+    <value>Мениджър Файлове</value>
+  </data>
+  <data name="Files" xml:space="preserve">
+    <value>Файлове</value>
+  </data>
+  <data name="FileSuccessfullyUploaded" xml:space="preserve">
+    <value>Файлът бе успешно качен</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Филтър</value>
+  </data>
+  <data name="HideComments" xml:space="preserve">
+    <value>Скрий Коментари</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Начална</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Картинки</value>
+  </data>
+  <data name="ImagesFolder" xml:space="preserve">
+    <value>Папка картинки</value>
+  </data>
+  <data name="ImagesManager" xml:space="preserve">
+    <value>Мениджър - Картинки</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>Грешна парола</value>
+  </data>
+  <data name="InsertSelectedFile" xml:space="preserve">
+    <value>Добави селектирания файл</value>
+  </data>
+  <data name="InsertSelectedImage" xml:space="preserve">
+    <value>Добави селектиранта картинка</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Език</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>Последни</value>
+  </data>
+  <data name="LinkAdded" xml:space="preserve">
+    <value>Препратката беше успешно добавена</value>
+  </data>
+  <data name="Links" xml:space="preserve">
+    <value>Препратки</value>
+  </data>
+  <data name="LinksForFilePreview" xml:space="preserve">
+    <value>Клинки върху името за преглед/отваряне</value>
+  </data>
+  <data name="LinksForImagePreview" xml:space="preserve">
+    <value>Клинки върху линка на картинката за пълен преглед</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>вход</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>изход</value>
+  </data>
+  <data name="Main" xml:space="preserve">
+    <value>Главна страница</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Име</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Нова Парола</value>
+  </data>
+  <data name="NoArticles" xml:space="preserve">
+    <value>Няма Статии</value>
+  </data>
+  <data name="NoArticleSelected" xml:space="preserve">
+    <value>Не е избрана статия</value>
+  </data>
+  <data name="NoAuthorSelected" xml:space="preserve">
+    <value>Не е избран автор</value>
+  </data>
+  <data name="NoComments" xml:space="preserve">
+    <value>Няма Коментари</value>
+  </data>
+  <data name="NoCommentsYet" xml:space="preserve">
+    <value>Все още няма коментари</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>на</value>
+  </data>
+  <data name="PageTitleTag" xml:space="preserve">
+    <value>Текст за тага на страничките</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>парола</value>
+  </data>
+  <data name="PasswordChanged" xml:space="preserve">
+    <value>Паролата беше успешно променена</value>
+  </data>
+  <data name="PasswordsNotMatch" xml:space="preserve">
+    <value>Паролите не съвпадат</value>
+  </data>
+  <data name="PostedBy" xml:space="preserve">
+    <value>Публикувано от</value>
+  </data>
+  <data name="PostedIn" xml:space="preserve">
+    <value>Публикувано в</value>
+  </data>
+  <data name="Rating" xml:space="preserve">
+    <value>Класиране</value>
+  </data>
+  <data name="ReadTheArticle" xml:space="preserve">
+    <value>Прочети статията</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Избери</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="SettingsUpdated" xml:space="preserve">
+    <value>Настройките бяха успешно променени</value>
+  </data>
+  <data name="ShowComments" xml:space="preserve">
+    <value>Покажи Коментари</value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>Текст</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Заглавие</value>
+  </data>
+  <data name="TopArticles" xml:space="preserve">
+    <value>Топ Статии</value>
+  </data>
+  <data name="TopArticlesCount" xml:space="preserve">
+    <value>Брой на Топ Статий за показване</value>
+  </data>
+  <data name="TotalCount" xml:space="preserve">
+    <value>Пълен Брой</value>
+  </data>
+  <data name="UnknownError" xml:space="preserve">
+    <value>Неустановена Грешка</value>
+  </data>
+  <data name="UnsuccessfulLogin" xml:space="preserve">
+    <value>Неуспешен опит за login в системата. Моля, опитайте отново.</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Редактирай</value>
+  </data>
+  <data name="UploadFile" xml:space="preserve">
+    <value>Прикачи Файл</value>
+  </data>
+  <data name="UploadImage" xml:space="preserve">
+    <value>Прикачи Картинка</value>
+  </data>
+  <data name="URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Потребителско име</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Преглед</value>
+  </data>
+  <data name="ViewEdit" xml:space="preserve">
+    <value>Преглед/Редактиране</value>
+  </data>
+  <data name="Website" xml:space="preserve">
+    <value>Web сайт</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Добре Дошли</value>
+  </data>
+</root>

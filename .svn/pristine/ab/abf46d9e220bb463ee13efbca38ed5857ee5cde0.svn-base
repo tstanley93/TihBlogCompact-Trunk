@@ -1,0 +1,219 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="TihBlogCompact.main" %>
+<%@ Register Assembly="RssToolkit, Version=1.0.0.1, Culture=neutral, PublicKeyToken=02e47a85b237026a" Namespace="RssToolkit" TagPrefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title><%= ConfigurationManager.AppSettings["titleTag"]%></title>
+    <link rel="stylesheet" type="text/css" href="App_Themes/Arc_Org/style.css"/>
+    <script type="text/javascript" src="script/ToolTip.js"></script>
+</head>
+<body>        
+    <div class="HeadDiv">
+        <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="33" style="background-color:#474747; border:1px solid #474747;color:#ffffff;">
+                    <table width="100%" border="0" cellspacing="5" cellpadding="0">
+                      <tr>
+                        <td width="50%">
+                        </td>
+                        <td width="50%" align="center">Today's date is <%= DateTime.Now.ToLongDateString() %></td>
+                      </tr>
+                    </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <img src="images/Arc_Logo_v2.jpg" width="1000" height="199" alt="" />
+                    </td>
+                  </tr>
+                </table>
+                </td>
+              </tr>
+            </table>
+    </div>
+    <div class="BodyDiv">        
+        <div class="blogHead">
+             <h1>
+                <%= ConfigurationManager.AppSettings["blogTitle"] %>
+             </h1>
+             <div class="blogHead_subtitle">
+              <%= ConfigurationManager.AppSettings["blogSubTitle"] %>
+             </div>
+        </div>
+        <form id="_mainForm" runat="server" style="margin:10px 0px 0px 0px;padding:0px; width: 1000px; margin-left: auto; margin-right: auto;">
+             <asp:ScriptManager ID="_scriptManager" runat="server"></asp:ScriptManager>
+     
+             <!-- Left Column -->
+             <div class="leftColumn">
+               <div class="areaTitle">
+                 <h2><%= Resources.Resources.TopArticles %></h2>
+               </div>
+               <div class="areaInner">
+                 <!-- Top Articles -->
+                 <asp:Repeater ID="_topArticlesRepeater" runat="server" DataSourceID="_topArticlesDS">
+                   <HeaderTemplate>
+                     <ul class="list">
+                   </HeaderTemplate>
+                   <ItemTemplate>
+                     <li>
+                       <a class="TopArticlesLinks" href='Article.aspx?articleId=<%# DataBinder.Eval(Container.DataItem, "ID") %>'><%# DataBinder.Eval(Container.DataItem, "title") %>&nbsp;(<%= Resources.Resources.Rating %>:&nbsp;<%# DataBinder.Eval(Container.DataItem, "rating", "{0:0.00}")%>)</a>
+                     </li>
+                   </ItemTemplate>
+                   <FooterTemplate>
+                     </ul>
+                   </FooterTemplate>
+                 </asp:Repeater>
+                 <tasp:TBAccessDataSource ID="_topArticlesDS" runat="server"
+                       SelectCommand="SELECT [title], 
+                                             [ID], 
+                                             [rating] 
+                                      FROM [Articles] 
+                                      ORDER BY [rating] DESC, [published] DESC">
+                 </tasp:TBAccessDataSource>
+                 <!-- / Top Articles -->
+               </div>     
+               <div class="areaTitle">
+                 <h2><%= Resources.Resources.Categories %></h2>
+               </div>
+               <div class="areaInner">
+                 <!-- Categories -->
+                 <asp:Repeater ID="_categoriesRepeater" runat="server" DataSourceID="_categoriesDS">
+                    <HeaderTemplate>
+                     <ul class="list">
+                   </HeaderTemplate>
+                   <ItemTemplate>
+                     <li>
+                       <a class="simple_link area_link postedIn" href='Default.aspx?categoryId=<%# DataBinder.Eval(Container.DataItem, "ID") %>'><%# DataBinder.Eval(Container.DataItem, "categoryName") %></a>&nbsp;
+                     </li>
+                   </ItemTemplate>
+                   <FooterTemplate>
+                     </ul>
+                   </FooterTemplate>
+                 </asp:Repeater>
+                 <tasp:TBAccessDataSource ID="_categoriesDS" runat="server"
+                       SelectCommand="SELECT [ID], 
+                                             [categoryName] 
+                                      FROM [Category] 
+                                      ORDER BY [categoryName]">
+                 </tasp:TBAccessDataSource>
+                 <!-- / Categories -->
+               </div>
+               <div class="areaTitle">
+                 <h2><%= Resources.Resources.Links %></h2>
+               </div>
+               <div class="areaInner">
+                 <!-- Links -->
+                 <asp:Repeater ID="Repeater1" runat="server" DataSourceID="_linksDS">
+                   <HeaderTemplate>
+                     <ul class="list">
+                   </HeaderTemplate>
+                   <ItemTemplate>
+                     <li>
+                       <a class="simple_link area_link" href='<%# DataBinder.Eval(Container.DataItem, "URL") %>'><%# DataBinder.Eval(Container.DataItem, "urlText") %></a>
+                     </li>
+                   </ItemTemplate>
+                   <FooterTemplate>
+                     </ul>
+                   </FooterTemplate>
+                 </asp:Repeater>
+                 <tasp:TBAccessDataSource ID="_linksDS" runat="server"
+                       SelectCommand="SELECT [URL], 
+                                             [urlText] 
+                                      FROM [Links]
+                                      ORDER BY [urlText]">
+                 </tasp:TBAccessDataSource>
+                 <!-- / Links -->
+               </div>
+             </div>
+             <!-- / Left Column -->
+     
+             <!-- Center Column -->
+             <div class="centerColumn" style="padding-top:0px;">
+               <div class="subMenu">
+                 <a class="subMenu_link" href='<%= ResolveUrl("~/Default.aspx") %>'><%= Resources.Resources.Home %></a>&nbsp;&nbsp;&nbsp;
+                 <a class="subMenu_link" href='<%= ResolveUrl("http://www.arcgh.org") %>'>Arc Home</a>&nbsp;&nbsp;&nbsp;
+                    <cc1:rsshyperlink id="_rssHL" runat="server" includeusername="False" 
+                        CssClass="subMenu_link" navigateurl="~/rssArticles.ashx" Text="Subscribe" 
+                        ChannelName="Latest Articles">
+                            <asp:Image ID="_subscribeRssImg" runat="server" ImageUrl="~/images/rssBtn.gif" />
+                    </cc1:rsshyperlink>
+                </div>
+               <asp:ContentPlaceHolder ID="_mainContentPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <!-- / Center Column -->
+     
+             <!-- Right Column -->
+             <div class="rightColumn">
+       
+               <div class="subMenu" style="text-align:center;margin-top:0px;">
+                 <a class="subMenu_link" href="admin/login.aspx"><%= Resources.Resources.Login %></a>
+               </div>
+       
+               <div class="areaTitle">
+                 <h2><%= Resources.Resources.Authors %></h2>
+               </div>
+               <div class="areaInner">
+                 <asp:Repeater ID="_authorsRepeater" runat="server" DataSourceID="_authorsDS">
+                   <HeaderTemplate>
+                     <ul class="list">
+                   </HeaderTemplate>
+                   <ItemTemplate>
+                     <li>
+                        <a class="simple_link area_link" href='Authors.aspx?authorId=<%# DataBinder.Eval(Container.DataItem, "ID") %>'>
+                            <%# DataBinder.Eval(Container.DataItem, "names")%>
+                        </a>
+                     </li>
+                   </ItemTemplate>
+                   <FooterTemplate>
+                     </ul>
+                   </FooterTemplate> 
+                 </asp:Repeater>
+                 <tasp:TBAccessDataSource ID="_authorsDS" runat="server" 
+                     SelectCommand="SELECT [ID],
+                                           [names]
+                                    FROM [Authors]">
+                 </tasp:TBAccessDataSource>
+               </div>
+               <asp:UpdatePanel ID="_updatePanel" runat="server" EnableViewState="true">
+                <ContentTemplate>
+                  <asp:Calendar ID="_eventsCalendar" runat="server" OnDayRender="_eventsCalendar_DayRender"></asp:Calendar>
+                </ContentTemplate>
+               </asp:UpdatePanel> 
+             </div>
+             <div id="ToolTipDiv" class="tip">
+                Articles Posted on this day were:
+                <ul>
+                    <li id="TipLi1" class="tipli"><asp:Label ID="TipLabel1" runat="server" Text=""></asp:Label></li>
+                    <li id="TipLi2" class="tipli"><asp:Label ID="TipLabel2" runat="server" Text=""></asp:Label></li>
+                    <li id="TipLi3" class="tipli"><asp:Label ID="TipLabel3" runat="server" Text=""></asp:Label></li>
+                    <li id="TipLi4" class="tipli"><asp:Label ID="TipLabel4" runat="server" Text=""></asp:Label></li>
+                    <li id="TipLi5" class="tipli"><asp:Label ID="TipLabel5" runat="server" Text=""></asp:Label></li>
+                </ul>
+             </div>
+             <!-- / Right Column -->
+                          
+             <div style="clear:both; float:none; overflow:hidden; line-height:0px; font-size:0px;">&nbsp;</div>
+             <!-- Footer -->
+             <div id="footer" style=" margin-top: 50px;">
+                <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">  
+                    <tr>
+                        <td style="background-color: #EA7125;" height="70px">
+                            <h1 style="color: White; margin-left: 15px; font-style: italic;">Achieve with us.</h1>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+             <div class="footer">
+                <%= Resources.Resources.CreatedBy%>&nbsp;<a href="http://www.aspnetsource.com" class="yellowLink blod_text footer_linkc">AspNetSource.com</a>
+             </div>
+             <!-- / Footer -->
+        </form>        
+    </div>    
+</body>
+</html>

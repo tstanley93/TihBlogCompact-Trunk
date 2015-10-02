@@ -1,0 +1,5 @@
+C:\Users\tstanley\Documents\Visual Studio 2010\Projects\TihBlogCompact-Trunk\bin\TihBlogCompact.dll
+C:\Users\tstanley\Documents\Visual Studio 2010\Projects\TihBlogCompact-Trunk\bin\TihBlogCompact.pdb
+C:\Users\tstanley\Documents\Visual Studio 2010\Projects\TihBlogCompact-Trunk\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\tstanley\Documents\Visual Studio 2010\Projects\TihBlogCompact-Trunk\obj\Debug\TihBlogCompact.dll
+C:\Users\tstanley\Documents\Visual Studio 2010\Projects\TihBlogCompact-Trunk\obj\Debug\TihBlogCompact.pdb

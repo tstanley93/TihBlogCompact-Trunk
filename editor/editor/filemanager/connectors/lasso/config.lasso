@@ -1,0 +1,43 @@
+[//lasso
+
+    /*.....................................................................
+    The connector uses the file tags, which require authentication. Enter a
+    valid username and password from Lasso admin for a group with file tags
+    permissions for uploads and the path you define in UserFilesPath below.
+    */
+
+	var('connection') = array(
+		-username='xxxxxxxx',
+		-password='xxxxxxxx'
+	);
+
+
+    /*.....................................................................
+    Set the base path for files that users can upload and browse (relative
+    to server root).
+
+    Set which file extensions are allowed and/or denied for each file type.
+    */
+	var('config') = map(
+		'Enabled' = false,
+		'UserFilesPath' = '/userfiles/',
+		'Subdirectories' = map(
+			'File' = 'File/',
+			'Image' = 'Image/',
+			'Flash' = 'Flash/',
+			'Media' = 'Media/'
+		),
+		'AllowedExtensions' = map(
+			'File' = array('7z','aiff','asf','avi','bmp','csv','doc','fla','flv','gif','gz','gzip','jpeg','jpg','mid','mov','mp3','mp4','mpc','mpeg','mpg','ods','odt','pdf','png','ppt','pxd','qt','ram','rar','rm','rmi','rmvb','rtf','sdc','sitd','swf','sxc','sxw','tar','tgz','tif','tiff','txt','vsd','wav','wma','wmv','xls','xml','zip'),
+			'Image' = array('bmp','gif','jpeg','jpg','png'),
+			'Flash' = array('swf','flv'),
+			'Media' = array('aiff','asf','avi','bmp','fla','flv','gif','jpeg','jpg','mid','mov','mp3','mp4','mpc','mpeg','mpg','png','qt','ram','rm','rmi','rmvb','swf','tif','tiff','wav','wma','wmv')
+		),
+		'DeniedExtensions' = map(
+			'File' = array(),
+			'Image' = array(),
+			'Flash' = array(),
+			'Media' = array()
+		)
+	);
+]

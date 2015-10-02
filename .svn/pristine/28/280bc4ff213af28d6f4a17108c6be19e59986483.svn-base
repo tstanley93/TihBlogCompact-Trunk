@@ -1,0 +1,73 @@
+
+/* standard tags */
+h1 { font-size: 48px; margin: 0 0 0 0; color:#ffffff; }
+h2 { font-size: 16px; margin: 0 0 0 0; color:#ffffff; }
+h3 { font-size: 18px; }
+body { background-color:#0099CC; font-family:Tahoma, Arial, Verdana, Sans-serif; font-size:12px; color:#ffffff; }
+
+/* additional classes */
+.HeadDiv { width: 1000px; margin-left: auto; margin-right: auto;}
+.BodyDiv { width: 1000px; background-color: #2f4c7c; margin-left: auto; margin-right: auto; }
+.blogHead { text-align:center; width: 1000px; padding-top: 15px; padding-bottom: 15px; margin-left: auto; margin-right: auto; }
+.blogHead_title { color: #ffffff; text-decoration: none; }
+.blogHead_title:hover { color: #ffffff; text-decoration:none;  border-bottom: 2px solid #ffffff; }
+.blogHead_subtitle { color: #ffffff;  font-style:italic; font-size:16px; text-align:center; font-weight:bold; margin: 15px 100px 15px 100px; }
+
+.subMenu { background-color:#000000; border:1px solid #000000; margin-bottom:5px; padding:2px; }
+.subMenu_link{ text-decoration:underline; color:#ffb400; font-size: 18px; }
+.subMenu_link:hover { text-decoration:none; color:#cccccc; font-size: 18px; }
+
+.blogSubTitle { color: #fe6b1d; font-size:24px; padding-top:10px; }
+
+.leftColumn { float: left; width:20%; margin-right: 10px; margin-left: 15px; }
+.centerColumn { float:left;width:55%; background-color:#20314c;}
+.rightColumn { float: left; width: 20%; margin-left: 10px; }
+
+.centerColumn a { color:#ffb400; text-decoration:none; font-size: 18px; }
+.centerColumn a:hover { color:#ffb400; text-decoration:underline; font-size: 18px; }
+
+.areaTitle { background-color:#020202; text-align:center; border-style:solid; border-color:#020202; border-width:1px; border-bottom:none; }
+.areaInner { background-color:#20314c; margin-bottom:10px; border-style:solid; border-color:#020202; border-width:1px; border-top:none; padding-left: 3px; color:#ffffff; text-align: left; }
+.article_footer { background: #020202; color:#4D4D4D; margin-top: 9px; margin-bottom: 0px; padding-top: 4px; padding-bottom: 6px; }
+.area_link { color:#ffffff; font-size: 18px; }
+.TopArticlesLinks { color: #ffffff; font-size: 12px; text-decoration: underline;}
+.TopArticlesLinks:hover { text-decoration: none; font-size: 14px;}
+
+.article_link{ text-decoration:underline; color:#cccccc; }
+.article_link:hover { text-decoration:none; color:#ffffff;	}
+.article_title { text-decoration:none; color: #fe6b1d; font-size:24px; }
+.article_title:hover { text-decoration:none; border-bottom: 0px solid #fe6b1d; }
+.commentTitle { background-color:#000000; border:1px solid #CACACA; margin:10px 0px; padding:2px; }
+
+.divLine { height: 1px; background-color:#356dcb; width:100%; font-size:0px;}
+.errorLabel { color:#FF0000; font-size:14px; }
+
+.controlBtn_link{ text-decoration:underline; color:#D73513; font-size: 18px; }
+.controlBtn_link:hover { text-decoration:none; font-size: 18px; }
+
+.footer {background-color:#000000; width: 994px; margin-top:100px; text-align:right; color:#ffffff; padding: 3px;}
+.footer_linkc {color: #ffb400; }
+
+.div_left { float:left; }
+.simple_link{ text-decoration:underline; font-size: 18px; }
+.simple_link:hover { text-decoration:none; font-size: 18px; }
+.margin_t_0{margin-top:0px;}
+.margin_0{margin:0px;}
+.list{ list-style:none; margin:0px;padding:0px;}
+.list li { padding-left:5px; padding-top:3px; border-bottom: 1px solid black; padding-bottom: 5px;}
+.blod_text { font-weight: bold; }
+.yellowLink { text-decoration:underline;}
+.yellowLink:hover { text-decoration: none;}
+
+.postedIn { color:#ffb400; }
+
+input { background-color:Black; border: solid 1px #cccccc; height:16px; line-height:16px; color:#ffffff; }
+select { background-color:Black; border: solid 1px #cccccc; height:16px; line-height:16px; height:22px; color:#ffffff; }
+
+/* Tool Tip Style */
+.tip { font-family: Lucida Sans; border:solid 1px #ffb400; padding:1px 5px 1px 0px; position:absolute; z-index:100; visibility:hidden; 
+       color:#ffb400; top:20px; left:90px; background-color:Black; } 
+
+.tipli { text-indent: 0px; display: none; list-style-type: circle; }   
+
+

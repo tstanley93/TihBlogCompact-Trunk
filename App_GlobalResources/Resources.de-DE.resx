@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Fügen Sie hinzu</value>
+  </data>
+  <data name="AddNew" xml:space="preserve">
+    <value>Addieren Sie neues</value>
+  </data>
+  <data name="AddNewComment" xml:space="preserve">
+    <value>Addieren Sie neue Anmerkung</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="AllArticles" xml:space="preserve">
+    <value>Alle Artikel</value>
+  </data>
+  <data name="AllCategories" xml:space="preserve">
+    <value>Alle Kategorien</value>
+  </data>
+  <data name="ApplyFilter" xml:space="preserve">
+    <value>Wenden Sie Filter an</value>
+  </data>
+  <data name="ArchiveFolder" xml:space="preserve">
+    <value>Archiv-Faltblatt</value>
+  </data>
+  <data name="Archives" xml:space="preserve">
+    <value>Archive</value>
+  </data>
+  <data name="Article" xml:space="preserve">
+    <value>Artikel</value>
+  </data>
+  <data name="ArticleAdded" xml:space="preserve">
+    <value>Artikel ist erfolgreich addiert worden</value>
+  </data>
+  <data name="Articles" xml:space="preserve">
+    <value>Artikel</value>
+  </data>
+  <data name="ArticlesExistOnCategory" xml:space="preserve">
+    <value>Artikel existieren von dieser Kategorie</value>
+  </data>
+  <data name="ArticlesPerPage" xml:space="preserve">
+    <value>Zahl der Artikel pro Seite</value>
+  </data>
+  <data name="Authors" xml:space="preserve">
+    <value>Autoren</value>
+  </data>
+  <data name="BlogSubTitle" xml:space="preserve">
+    <value>Blog' s-Untertitel</value>
+  </data>
+  <data name="BlogTitle" xml:space="preserve">
+    <value>Blog' s-Titel</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Kategorien</value>
+  </data>
+  <data name="CategoryAdded" xml:space="preserve">
+    <value>Kategorie ist erfolgreich addiert worden</value>
+  </data>
+  <data name="CategoryName" xml:space="preserve">
+    <value>Kategorien-Name</value>
+  </data>
+  <data name="CategoryNameExist" xml:space="preserve">
+    <value>Kategorie mit diesem Namen existieren bereits</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Ändern Sie Kennwort</value>
+  </data>
+  <data name="Characters" xml:space="preserve">
+    <value>Buchstaben</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Anmerkung</value>
+  </data>
+  <data name="CommentAdded" xml:space="preserve">
+    <value>Anmerkung ist erfolgreich addiert worden</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Anmerkungen</value>
+  </data>
+  <data name="CommentsAreOff" xml:space="preserve">
+    <value>Anmerkungen sind aus</value>
+  </data>
+  <data name="CommentsToShow" xml:space="preserve">
+    <value>Zahl der Anmerkungen zum darzustellen</value>
+  </data>
+  <data name="ConfirmNewPassword" xml:space="preserve">
+    <value>Bestätigen Sie neues Kennwort</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Land</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Vorbei verursacht</value>
+  </data>
+  <data name="CryptKey" xml:space="preserve">
+    <value>Krypta-Schlüssel</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>Gegenwärtiges Kennwort</value>
+  </data>
+  <data name="CurrentStatus" xml:space="preserve">
+    <value>Gegenwärtiger Status</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="EnterComment" xml:space="preserve">
+    <value>Bitte tragen Sie eine Anmerkung ein</value>
+  </data>
+  <data name="EnterConfirmPassword" xml:space="preserve">
+    <value>Bitte kommen Sie bestätigen Kennwort herein</value>
+  </data>
+  <data name="EnterEmail" xml:space="preserve">
+    <value>Bitte betreten Sie eine e-mail</value>
+  </data>
+  <data name="EnterLessThan" xml:space="preserve">
+    <value>Bitte betreten Sie kleiner als</value>
+  </data>
+  <data name="EnterName" xml:space="preserve">
+    <value>Bitte tragen Sie einen Namen ein</value>
+  </data>
+  <data name="EnterNewPassword" xml:space="preserve">
+    <value>Bitte tragen Sie neues Kennwort ein</value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>Bitte tragen Sie ein Kennwort ein</value>
+  </data>
+  <data name="EnterUserName" xml:space="preserve">
+    <value>Bitte tragen Sie ein username ein</value>
+  </data>
+  <data name="EnterValidEmail" xml:space="preserve">
+    <value>Bitte betreten Sie eine gültige e-mail</value>
+  </data>
+  <data name="EnterValidName" xml:space="preserve">
+    <value>Bitte tragen Sie einen gültigen Namen ein</value>
+  </data>
+  <data name="EnterValidURL" xml:space="preserve">
+    <value>Bitte tragen Sie ein gültiges URL ein</value>
+  </data>
+  <data name="FileManager" xml:space="preserve">
+    <value>Akte Manager</value>
+  </data>
+  <data name="Files" xml:space="preserve">
+    <value>Akten</value>
+  </data>
+  <data name="FileSuccessfullyUploaded" xml:space="preserve">
+    <value>Akte ist erfolgreich geladen worden</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="HideComments" xml:space="preserve">
+    <value>Fell-Anmerkungen</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Bilder</value>
+  </data>
+  <data name="ImagesFolder" xml:space="preserve">
+    <value>Bild-Faltblatt</value>
+  </data>
+  <data name="ImagesManager" xml:space="preserve">
+    <value>Bilder Manager</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>Falsches Kennwort</value>
+  </data>
+  <data name="InsertSelectedFile" xml:space="preserve">
+    <value>Setzen Sie vorgewählte Akte ein</value>
+  </data>
+  <data name="InsertSelectedImage" xml:space="preserve">
+    <value>Setzen Sie vorgewähltes Bild ein</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>Letztes</value>
+  </data>
+  <data name="LinkAdded" xml:space="preserve">
+    <value>Verbindung ist erfolgreich addiert worden</value>
+  </data>
+  <data name="Links" xml:space="preserve">
+    <value>Verbindungen</value>
+  </data>
+  <data name="LinksForFilePreview" xml:space="preserve">
+    <value>Klicken Sie, an Verbindungen eines Namens für Ansicht/öffnen Sie sich</value>
+  </data>
+  <data name="LinksForImagePreview" xml:space="preserve">
+    <value>Klicken Sie an Verbindungen eines Bildes für auf dem ganzen Bildschirmansicht</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>LOGON</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Main" xml:space="preserve">
+    <value>Hauptsächlich</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Neues Kennwort</value>
+  </data>
+  <data name="NoArticles" xml:space="preserve">
+    <value>Keine Artikel</value>
+  </data>
+  <data name="NoArticleSelected" xml:space="preserve">
+    <value>Kein Artikel wählte vor</value>
+  </data>
+  <data name="NoAuthorSelected" xml:space="preserve">
+    <value>Kein Autor wählte vor</value>
+  </data>
+  <data name="NoComments" xml:space="preserve">
+    <value>Dort keine Anmerkungen</value>
+  </data>
+  <data name="NoCommentsYet" xml:space="preserve">
+    <value>Keine Anmerkungen schon</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>auf</value>
+  </data>
+  <data name="PageTitleTag" xml:space="preserve">
+    <value>Seiten-Titel-Umbau</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Kennwort</value>
+  </data>
+  <data name="PasswordChanged" xml:space="preserve">
+    <value>Kennwort ist erfolgreich geändert worden</value>
+  </data>
+  <data name="PasswordsNotMatch" xml:space="preserve">
+    <value>Kennwörter don' t-Gleiches</value>
+  </data>
+  <data name="PostedBy" xml:space="preserve">
+    <value>Vorbei bekannt gegeben</value>
+  </data>
+  <data name="PostedIn" xml:space="preserve">
+    <value>Innen bekannt gegeben</value>
+  </data>
+  <data name="Rating" xml:space="preserve">
+    <value>Bewertung</value>
+  </data>
+  <data name="ReadTheArticle" xml:space="preserve">
+    <value>Lesen Sie den Artikel</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Auserwählt</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="SettingsUpdated" xml:space="preserve">
+    <value>Einstellungen ist erfolgreich aktualisiert worden</value>
+  </data>
+  <data name="ShowComments" xml:space="preserve">
+    <value>Zeigen Sie Anmerkungen</value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Thema</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Titel</value>
+  </data>
+  <data name="TopArticles" xml:space="preserve">
+    <value>Spitzenartikel</value>
+  </data>
+  <data name="TopArticlesCount" xml:space="preserve">
+    <value>Zahl der Spitzenartikel zum darzustellen</value>
+  </data>
+  <data name="TotalCount" xml:space="preserve">
+    <value>Gesamtrechnung</value>
+  </data>
+  <data name="UnknownError" xml:space="preserve">
+    <value>Unbekannte Störung trat auf</value>
+  </data>
+  <data name="UnsuccessfulLogin" xml:space="preserve">
+    <value>Ihr Versuch anzumelden war erfolglos. Versuchen Sie bitte noch einmal.</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="UploadFile" xml:space="preserve">
+    <value>Antriebskraft-Akte</value>
+  </data>
+  <data name="UploadImage" xml:space="preserve">
+    <value>Antriebskraft-Bild</value>
+  </data>
+  <data name="URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>username</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Ansicht</value>
+  </data>
+  <data name="ViewEdit" xml:space="preserve">
+    <value>Ansicht/Redigieren Sie</value>
+  </data>
+  <data name="Website" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Willkommen</value>
+  </data>
+</root>

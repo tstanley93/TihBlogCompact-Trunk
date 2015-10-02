@@ -1,0 +1,194 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="adminMain.master.cs" Inherits="TihBlogCompact.Admin.AdminMainMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title><%= ConfigurationManager.AppSettings["titleTag"] %>&nbsp;|&nbsp;<%= Resources.Resources.Admin %></title>
+    <asp:ContentPlaceHolder ID="_headContentPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="HeadDiv">
+        <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="33" style="background-color:#474747; border:1px solid #474747;color:#ffffff;">
+                    <table width="100%" border="0" cellspacing="5" cellpadding="0">
+                      <tr>
+                        <td class="p" width="50%">
+                        </td>
+                        <td width="50%" align="center">Today's date is <%= DateTime.Now.ToLongDateString() %></td>
+                      </tr>
+                    </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <img src="../images/Arc_Logo_v3.jpg" width="1000" height="199" alt="" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                    </td>
+                  </tr>
+                </table>
+                </td>
+              </tr>
+            </table>
+    </div>
+    <div class="BodyDiv">        
+        <div class="blogHead">
+             <h1>
+                <%= ConfigurationManager.AppSettings["blogTitle"] %>
+             </h1>
+             <div class="blogHead_subtitle">
+              <%= ConfigurationManager.AppSettings["blogSubTitle"] %>
+             </div>
+        </div>
+      <form id="_mainForm" runat="server">
+            <asp:ScriptManager ID="_scriptManager" runat="server"></asp:ScriptManager>
+    
+            <!-- Left Column -->
+            <div style="float:left; margin-right: 10px; margin-left: 15px;">
+                <!-- Login -->
+                <div class="areaTitle" style="border-width:0px;">
+                <h2><%= GetUserName() %></h2>
+                </div>
+                <div class="areaInner margin_0">
+                <div style="margin: 0px 0px;">
+                    &nbsp;<asp:LinkButton ID="_logoutBtn" CssClass="subMenu_link" CausesValidation="false" runat="server" OnClick="_logoutBtn_Click"></asp:LinkButton>&nbsp;&nbsp;&nbsp;
+                 <a class="simple_link" href='<%= ResolveUrl("http://www.arcgh.org/") %>'>Arc Home</a>
+                </div>
+                </div>
+                <!-- / Login -->
+                <!-- Comments -->
+                <div class="areaTitle">
+                <h2><%= Resources.Resources.Comments %></h2>
+                </div>
+                <div class="areaInner margin_0">
+                <div style="margin: 0px 0px;">
+                    &nbsp;<a class="subMenu_link" href="adminComments.aspx"><%= Resources.Resources.ViewEdit %></a>
+                </div>
+                </div>
+                <!-- / Comments -->
+                <!-- Articles -->
+                <div class="areaTitle">
+                <h2><%= Resources.Resources.Articles %></h2>
+                </div>
+                <div class="areaInner margin_0">
+                <div style="margin: 0px 0px;">
+                <div>
+                    &nbsp;<a class="subMenu_link" href="adminAddArticle.aspx"><%= Resources.Resources.AddNew %></a>
+                </div>
+                <div>
+                    &nbsp;<a class="subMenu_link" href="adminArticles.aspx"><%= Resources.Resources.ViewEdit %></a>
+                </div>
+                </div>
+                </div>
+                <!-- / Articles -->
+                <!-- Categories -->
+                <div class="areaTitle">
+                <h2><%= Resources.Resources.Categories %></h2>
+                </div>
+                <div class="areaInner margin_0">
+                <div style="margin: 0px 0px;">
+                <div>
+                    &nbsp;<a class="subMenu_link" href="adminAddCategory.aspx"><%= Resources.Resources.AddNew %></a>
+                </div>
+                <div>
+                    &nbsp;<a class="subMenu_link" href="adminCategories.aspx"><%= Resources.Resources.ViewEdit %></a>
+                </div>
+                </div>
+                </div>
+                <!-- / Categories -->
+                <!-- Author -->
+                <div class="areaTitle">
+                <h2><%= Resources.Resources.Authors %></h2>
+                </div>
+                <div class="areaInner margin_0">
+                <div style="margin: 0px 0px;">
+                <div>
+                    &nbsp;<a class="subMenu_link" href="adminChangePassword.aspx"><%= Resources.Resources.ChangePassword %></a>
+                </div>
+                <div>
+                    &nbsp;<a class="subMenu_link" href="adminAuthors.aspx"><%= Resources.Resources.ViewEdit %></a>
+                </div>
+                </div>
+                </div>
+                <!-- / Author -->
+                <!-- Archives -->
+                <div class="areaTitle">
+                <h2><%= Resources.Resources.Archives %></h2>
+                </div>
+                <div class="areaInner margin_0">
+                <div style="margin: 0px 0px;">
+                <div>
+                    &nbsp;<a class="subMenu_link" href="adminFileManager.aspx"><%= Resources.Resources.FileManager %></a>
+                </div>
+                <div>
+                    &nbsp;<a class="subMenu_link" href="adminImagesManager.aspx"><%= Resources.Resources.ImagesManager %></a>
+                </div>
+                </div>
+                </div>
+                <!-- / Archives -->
+                <!-- Links -->
+                <div class="areaTitle">
+                <h2><%= Resources.Resources.Links %></h2>
+                </div>
+                <div class="areaInner margin_0">
+                <div style="margin: 0px 0px;">
+                <div>
+                    &nbsp;<a class="subMenu_link" href="adminAddLink.aspx"><%= Resources.Resources.AddNew %></a>
+                </div>
+                <div>
+                    &nbsp;<a class="subMenu_link" href="adminLinks.aspx"><%= Resources.Resources.ViewEdit %></a>
+                </div>
+                </div>
+                </div>
+                <!-- / Links -->
+                <!-- Settings -->
+                <div class="areaTitle">
+                <h2><%= Resources.Resources.Settings %></h2>
+                </div>
+                <div class="areaInner margin_0">
+                <div style="margin: 0px 0px;">
+                <div>
+                    &nbsp;<a class="subMenu_link" href="adminSettings.aspx"><%= Resources.Resources.ViewEdit %></a>
+                </div>
+                </div>
+                </div>
+                <!-- / Settings -->
+            </div>
+            <!-- / Left Column -->
+    
+            <!-- Center Column -->
+            <div style="float:left;width:75%;">
+                <asp:ContentPlaceHolder ID="_mainContentPlaceHolder" runat="server">
+     
+                </asp:ContentPlaceHolder>
+                </div>
+            <!-- / Center Column -->
+    
+    
+            <div style="clear:both; float:none; overflow:hidden; line-height:0px; font-size:0px;">&nbsp;</div>
+                <!-- Footer -->
+                <div id="footer" style=" margin-top: 50px;">
+                    <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">  
+                        <tr>
+                            <td style="background-color: #EA7125;" height="70px">
+                                <h1 style="color: White; margin-left: 15px; font-style: italic;">Achieve with us.</h1>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="footer">
+                <%= Resources.Resources.CreatedBy %>&nbsp;<a href="http://www.aspnetsource.com" class="simple_link blod_text footer_linkc">AspNetSource.com</a>
+                </div>
+                <!-- / Footer -->
+      </form>
+    </div>
+</body>
+</html>

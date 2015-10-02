@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<configuration>
+	<configSections>
+		<sectionGroup name="microsoft.web" type="Microsoft.Web.Configuration.MicrosoftWebSectionGroup, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+			<sectionGroup name="scripting" type="Microsoft.Web.Configuration.ScriptingSectionGroup, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+				<sectionGroup name="webServices" type="Microsoft.Web.Configuration.ScriptingWebServicesSectionGroup, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+					<section name="jsonSerialization" type="Microsoft.Web.Configuration.ScriptingJsonSerializationSection, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false"/>
+					<section name="profileService" type="Microsoft.Web.Configuration.ScriptingProfileServiceSection, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false"/>
+					<section name="authenticationService" type="Microsoft.Web.Configuration.ScriptingAuthenticationServiceSection, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false"/>
+				</sectionGroup>
+			</sectionGroup>
+		</sectionGroup>
+	</configSections>
+	<appSettings>
+    <add key="titleTag" value="The Arc of Grays Harbor Blog" />
+    <add key="blogTitle" value="The Arc of Grays Harbor Blog" />
+    <add key="blogSubTitle" value='“Never doubt that a small group of concerned citizens can’t change the world; indeed, it’s the only thing that ever has”  Margaret Mead' />
+    <add key="CommentsToShow" value="5" />
+    <add key="ArticlesPerPage" value="4" />
+		<add key="ArticlesPerPage" value="4"/>
+		<add key="TopArticlesCount" value="2"/>
+		<add key="useLocalConnString" value="true"/>
+		<add key="dataFile" value="~/App_Data/TihBlogData.mdb"/>
+		<add key="filesPath" value="~/archives/"/>
+		<add key="imagesPath" value="~/archives/images/"/>
+		<add key="cryptKey" value="b3m4s7yopele"/>
+	</appSettings>
+	<connectionStrings>
+		<add name="LocalAccessDatabase" connectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=~/App_Data/TihBlogData.mdb; Persist Security Info=False;" providerName="System.Data.OleDb"/>
+	</connectionStrings>
+	<system.web>
+		<pages theme="Arc_Org">
+			<controls>
+				<add tagPrefix="asp" namespace="Microsoft.Web.UI" assembly="Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+				<add tagPrefix="asp" namespace="Microsoft.Web.UI.Controls" assembly="Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+				<add tagPrefix="tasp" namespace="TihBlogCompact.Controls" assembly="TihBlogCompact"/>
+			</controls>
+			<tagMapping>
+				<add tagType="System.Web.UI.WebControls.CompareValidator" mappedTagType="Microsoft.Web.UI.Compatibility.CompareValidator, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+				<add tagType="System.Web.UI.WebControls.CustomValidator" mappedTagType="Microsoft.Web.UI.Compatibility.CustomValidator, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+				<add tagType="System.Web.UI.WebControls.RangeValidator" mappedTagType="Microsoft.Web.UI.Compatibility.RangeValidator, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+				<add tagType="System.Web.UI.WebControls.RegularExpressionValidator" mappedTagType="Microsoft.Web.UI.Compatibility.RegularExpressionValidator, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+				<add tagType="System.Web.UI.WebControls.RequiredFieldValidator" mappedTagType="Microsoft.Web.UI.Compatibility.RequiredFieldValidator, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+				<add tagType="System.Web.UI.WebControls.ValidationSummary" mappedTagType="Microsoft.Web.UI.Compatibility.ValidationSummary, Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+			</tagMapping>
+		</pages>
+		<!-- 
+            Set compilation debug="true" to insert debugging 
+            symbols into the compiled page. Because this 
+            affects performance, set this value to true only 
+            during development.
+        -->
+		<compilation debug="true">
+			<assemblies>
+				<add assembly="RssToolkit,Version=1.0.0.1,Culture=neutral,PublicKeyToken=02e47a85b237026a"/>
+			</assemblies>
+			<buildProviders>
+				<add extension=".rss" type="RssToolkit.RssBuildProvider,RssToolkit,Version=1.0.0.1,Culture=neutral,PublicKeyToken=02e47a85b237026a"/>
+				<add extension=".rssdl" type="RssToolkit.RssdlBuildProvider,RssToolkit,Version=1.0.0.1,Culture=neutral,PublicKeyToken=02e47a85b237026a"/>
+			</buildProviders>
+		</compilation>
+		<!--
+            The <authentication> section enables configuration 
+            of the security authentication mode used by 
+            ASP.NET to identify an incoming user. 
+        -->
+		<authentication mode="Windows"/>
+		<!--
+            The <customErrors> section enables configuration 
+            of what to do if/when an unhandled error occurs 
+            during the execution of a request. Specifically, 
+            it enables developers to configure html error pages 
+            to be displayed in place of a error stack trace.
+    -->
+		<customErrors mode="Off" defaultRedirect="Error.aspx">
+		</customErrors>
+		<globalization requestEncoding="utf-8" responseEncoding="utf-8" fileEncoding="utf-8" culture="en-US"/>
+	</system.web>
+	<system.webServer>
+		<handlers>
+			<remove name="WebServiceHandlerFactory-ISAPI-2.0"/>
+		</handlers>
+	</system.webServer>
+</configuration>

@@ -1,0 +1,54 @@
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<asp:Calendar runat="server" 
+        BackColor="#FFFFFF"    
+        Font-Names="Trebuchet MS"
+        Font-Size="12px" 
+        BorderColor="#474747" 
+        BorderStyle="Solid" 
+        BorderWidth="1px" 
+        ForeColor="474747">
+    <TitleStyle BackColor="#474747" BorderColor="#474747" BorderStyle="Solid" BorderWidth="1px" ForeColor="#FECB00" />
+    <SelectedDayStyle ForeColor="#FECB00">
+    </SelectedDayStyle>
+    <SelectorStyle ForeColor="#FECB00">
+    </SelectorStyle>
+</asp:Calendar>    
+
+<asp:GridView runat="server" SkinID="AdminGridSkin" BackColor="White" BorderColor="#999999"
+  BorderStyle="Solid" BorderWidth="1px" CellPadding="3" 
+  ForeColor="Black" GridLines="Vertical">
+    <FooterStyle BackColor="#CCCCCC" />
+    <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+    <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+    <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+    <AlternatingRowStyle BackColor="#CCCCCC" />
+</asp:GridView>
+
+<asp:GridView runat="server" BorderStyle="None" SkinID="NoneGridSkin"
+            BorderWidth="0px">
+            <RowStyle BorderStyle="None" BorderWidth="0px" />
+            <EmptyDataRowStyle BorderStyle="None" BorderWidth="0px" />
+            <SelectedRowStyle BorderStyle="None" BorderWidth="0px" />
+            <EditRowStyle BorderStyle="None" BorderWidth="0px" />
+            <AlternatingRowStyle BorderStyle="None" BorderWidth="0px" />
+        </asp:GridView>
+        
+<asp:Button runat="server" BackColor="#ffb400" BorderColor="#ffb400"
+   BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" Height="20px" />
+   
+<asp:FileUpload runat="server" Height="20px" />
